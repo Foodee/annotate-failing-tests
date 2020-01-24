@@ -1,0 +1,27 @@
+{
+  "name": "annotate-failing-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.1",
+    "@actions/github": "^2.0.1",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@octokit/action": "^1.2.0",
+    "babel-jest": "^25.1.0",
+    "junit-xml-parser": "0.0.3",
+    "junitxml-to-javascript": "^1.1.4",
+    "source-map": "^0.7.3",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
