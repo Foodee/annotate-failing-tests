@@ -19,8 +19,9 @@ async function reportToGithub(annotations) {
     console.log(`Owner: ${owner}`);
     console.log(`Repo: ${repo}`);
     console.log(`Check Run: ${check_run}`);
+    const checkName = core.getInput('check-name', {required: true});
 
-    const {data: {check_runs}} = await octokit.checks.listForRef({
+    const res = await octokit.checks.listForRef({
       owner,
       repo,
       ref,
@@ -28,10 +29,13 @@ async function reportToGithub(annotations) {
       // status: "in_progress"
     });
 
+    console.log(JSON.stringify(res.data, null, 2));
+
+    const {data: {check_runs}} = res ;
+
     console.log('Checks');
     console.log(JSON.stringify(check_runs, null, 2));
 
-    const checkName = core.getInput('check-name', {required: true});
     const check_run_id = check_runs.filter(cr => cr.name == checkName)[0].id;
 
     await octokit.checks.update({
