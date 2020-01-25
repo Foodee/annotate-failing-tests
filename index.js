@@ -109,7 +109,7 @@ async function run(path, language) {
 }
 
 
-const path = core.getInput('report_file');
+const path = core.getInput('report-file');
 const language = core.getInput('language');
 
 console.log(`Running Annotate Failing Tests Action ${path} in language${language}`);
