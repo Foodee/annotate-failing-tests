@@ -12,12 +12,9 @@ async function reportToGithub(annotations) {
   try {
     const octokit = new Octokit();
     const ref = github.context.sha;
-    const owner = github.context.payload.repository.owner.name;
-    const repo = github.context.payload.repository.name;
-    const workflow = github.context.workflow;
+    const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
-    console.log('Reporting to');
     console.log(`Ref: ${ref}`);
     console.log(`Owner: ${owner}`);
     console.log(`Repo: ${repo}`);
@@ -40,7 +37,7 @@ async function reportToGithub(annotations) {
       owner,
       repo,
       check_run_id,
-      output: {title: `${workflow} Check Run`, summary: `${annotations.length} errors(s) found`, annotations}
+      output: {title: `${check_run} Check Run`, summary: `${annotations.length} errors(s) found`, annotations}
     });
   } catch (e) {
     console.log(e)
