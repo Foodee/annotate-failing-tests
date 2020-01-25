@@ -12,7 +12,7 @@ async function reportToGithub(annotations) {
   try {
     const octokit = new Octokit();
     const ref = process.env.GITHUB_REF;
-    const sha= process.env.GITHUB_SHA;
+    const sha = process.env.GITHUB_SHA;
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
@@ -31,9 +31,19 @@ async function reportToGithub(annotations) {
       // status: "in_progress"
     });
 
-    console.log(JSON.stringify(res.data, null, 2));
+    const suites = await octokit.checks.listSuitesForRef({
+      owner,
+      repo,
+      ref,
+      // check_run,
+      // status: "in_progress"
+    });
 
-    const {data: {check_runs}} = res ;
+
+    console.log(JSON.stringify(res.data, null, 2));
+    console.log(JSON.stringify(suites.data, null, 2));
+
+    const {data: {check_runs}} = res;
 
     console.log('Checks');
     console.log(JSON.stringify(check_runs, null, 2));
