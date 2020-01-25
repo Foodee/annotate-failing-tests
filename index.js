@@ -28,6 +28,10 @@ async function reportToGithub(annotations) {
       status: "in_progress"
     });
 
+    console.log('Checks');
+
+    console.log(JSON.stringify(check_runs, null, 2);
+
     const checkName = core.getInput('check-name', {required: true});
     const check_run_id = check_runs.filter(cr => cr.name == checkName)[0].id;
 
