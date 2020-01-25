@@ -11,7 +11,7 @@ const convert = require('xml-js');
 async function reportToGithub(annotations) {
   try {
     const octokit = new Octokit();
-    const ref = github.context.GITHUB_REF;
+    const ref = process.env.GITHUB_SHA || process.env.GITHUB_REF;
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
