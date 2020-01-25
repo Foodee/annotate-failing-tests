@@ -12,6 +12,6 @@ inputs:
     description: 'Path to the file where the xunit test report file lives'
     required: true
     default: ''
-  checkRunNameEnvVar:
-    description: 'Environment variable to read to get the variable part of the current check run.'
+  check_name:
+    description: 'The name of the check this action is running in'
     required: true
