@@ -9,31 +9,35 @@ const {SourceMapConsumer} = require("source-map");
 const convert = require('xml-js');
 
 async function reportToGithub(annotations) {
-  const octokit = new Octokit();
-  const ref = github.context.sha;
-  const owner = github.context.payload.repository.owner.name;
-  const repo = github.context.payload.repository.name;
-  const workflow = github.context.workflow;
-  const check_run = process.env.GITHUB_WORKFLOW;
+  try {
+    const octokit = new Octokit();
+    const ref = github.context.sha;
+    const owner = github.context.payload.repository.owner.name;
+    const repo = github.context.payload.repository.name;
+    const workflow = github.context.workflow;
+    const check_run = process.env.GITHUB_WORKFLOW;
 
-  const {data: {check_runs}} = await octokit.checks.listForRef({
-    owner,
-    repo,
-    ref,
-    check_run,
-    status: "in_progress"
-  });
+    const {data: {check_runs}} = await octokit.checks.listForRef({
+      owner,
+      repo,
+      ref,
+      check_run,
+      status: "in_progress"
+    });
 
-  const checkRunNameEnvVar = core.getInput('checkRunNameEnvVar', {required: true});
-  const checkRunNameVarPart = process.env[checkRunNameEnvVar];
-  const check_run_id = check_runs.filter(cr => cr.name.indexOf(checkRunNameVarPart) >= 0)[0].id;
+    const checkRunNameEnvVar = core.getInput('checkRunNameEnvVar', {required: true});
+    const checkRunNameVarPart = process.env[checkRunNameEnvVar];
+    const check_run_id = check_runs.filter(cr => cr.name.indexOf(checkRunNameVarPart) >= 0)[0].id;
 
-  await octokit.checks.update({
-    owner,
-    repo,
-    check_run_id,
-    output: {title: `${workflow} Check Run`, summary: `${annotations.length} errors(s) found`, annotations}
-  });
+    await octokit.checks.update({
+      owner,
+      repo,
+      check_run_id,
+      output: {title: `${workflow} Check Run`, summary: `${annotations.length} errors(s) found`, annotations}
+    });
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 const EXTRACTORS = {
