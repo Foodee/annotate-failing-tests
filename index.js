@@ -18,7 +18,6 @@ async function reportToGithub(annotations) {
     console.log(`Ref: ${ref}`);
     console.log(`Owner: ${owner}`);
     console.log(`Repo: ${repo}`);
-    console.log(`Workflow: ${workflow}`);
     console.log(`Check Run: ${check_run}`);
 
     const {data: {check_runs}} = await octokit.checks.listForRef({
@@ -45,13 +44,14 @@ async function reportToGithub(annotations) {
 }
 
 const EXTRACTORS = {
-  async ruby(lines) {
-    const source = lines[lines.length - 1];
+
+  async ruby(stack_trace) {
+    const source = stack_trace[stack_trace.length - 1];
     return source.split(':');
   },
 
-  async js(lines) {
-    const sourceLine = lines[2];
+  async ember_js_mocha(stack_trace) {
+    const sourceLine = stack_trace[2];
     const [_, mapped_line, mapped_column] = /(\d+):(\d+)/.exec(sourceLine) || [];
     const {source, line} = await unMap(parseInt(mapped_line), parseInt(mapped_column));
 
@@ -62,6 +62,10 @@ const EXTRACTORS = {
 
 async function extractAnnotations(file, language = 'ruby') {
   const {assign} = Object;
+
+  // Extract relevant info from the junit test report didn't use an NPM package
+  // as it does not extract content from error message which in the case of
+  // ember JS is where the stack trace lives.
   const testSuites = convert.xml2js(await readFile(file))
     .elements
     .map(_ => assign({
@@ -122,7 +126,7 @@ const language = core.getInput('language');
 
 console.log(`Running Annotate Failing Tests Action ${path} in language${language}`);
 
-if (path) {
+if (path, language) {
   run(path, language);
 }
 

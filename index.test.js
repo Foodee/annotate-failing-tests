@@ -16,7 +16,7 @@ test('extracts annotations from ruby stack traces', async () => {
 });
 
 test('extracts annotations from ember stack traces', async () => {
-  const annotations = await extractAnnotations('test-ember.xml', 'js');
+  const annotations = await extractAnnotations('test-ember.xml', 'ember_js_mocha');
 
   expect(annotations).toStrictEqual([
     {
