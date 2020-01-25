@@ -28,7 +28,7 @@ async function reportToGithub(annotations) {
       status: "in_progress"
     });
 
-    consoloe.log(JSON.stringify(process.env, null, 2));
+    console.log(JSON.stringify(process.env, null, 2));
     const checkRunNameEnvVar = core.getInput('checkRunNameEnvVar', {required: true});
     const checkRunNameVarPart = process.env[checkRunNameEnvVar];
     const check_run_id = check_runs.filter(cr => cr.name.indexOf(checkRunNameVarPart) >= 0)[0].id;
