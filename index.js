@@ -28,7 +28,7 @@ async function reportToGithub(annotations) {
       status: "in_progress"
     });
 
-    const checkName = core.getInput('check_name', {required: true});
+    const checkName = core.getInput('check-name', {required: true});
     const check_run_id = check_runs.filter(cr => cr.name == checkName)[0].id;
 
     await octokit.checks.update({

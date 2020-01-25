@@ -8,10 +8,10 @@ branding:
   icon:  'search'
   color: 'red'
 inputs:
-  report_file:
+  report-file:
     description: 'Path to the file where the xunit test report file lives'
     required: true
     default: ''
-  check_name:
+  check-name:
     description: 'The name of the check this action is running in'
     required: true

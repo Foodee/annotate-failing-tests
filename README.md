@@ -23,5 +23,6 @@ jobs:
         with:
           report-file: report.xml
           language: ruby
+          check-name: test
 
 ```
