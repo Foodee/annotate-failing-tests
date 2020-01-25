@@ -17,6 +17,13 @@ async function reportToGithub(annotations) {
     const workflow = github.context.workflow;
     const check_run = process.env.GITHUB_WORKFLOW;
 
+    console.log('Reporting to');
+    console.log(`Ref: ${ref}`);
+    console.log(`Owner: ${owner}`);
+    console.log(`Repo: ${repo}`);
+    console.log(`Workflow: ${workflow}`);
+    console.log(`Check Run: ${check_run}`);
+
     const {data: {check_runs}} = await octokit.checks.listForRef({
       owner,
       repo,
