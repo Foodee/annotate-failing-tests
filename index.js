@@ -24,8 +24,8 @@ async function reportToGithub(annotations) {
       owner,
       repo,
       ref,
-      check_run,
-      status: "in_progress"
+      // check_run,
+      // status: "in_progress"
     });
 
     console.log('Checks');
