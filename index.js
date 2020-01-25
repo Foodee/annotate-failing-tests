@@ -112,6 +112,8 @@ async function run(path, language) {
 const path = core.getInput('report_file');
 const language = core.getInput('language');
 
+console.log(`Running Annotate Failing Tests Action ${path} in language${language}`);
+
 if (path) {
   run(path, language);
 }
