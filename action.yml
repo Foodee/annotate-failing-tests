@@ -1,0 +1,14 @@
+name:        'Annotate Ruby & Ember Test Failures'
+description: 'Annotate git with test failures'
+author:      'Joe Gaudet <joe.gaudet@food.ee>'
+runs:
+  using: 'node12'
+  main:  'index.js'
+branding:
+  icon:  'search'
+  color: 'red'
+inputs:
+  report_file:
+    description: 'Path to the file where the xunit test report file lives'
+    required: true
+    default: ''

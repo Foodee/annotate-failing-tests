@@ -52,8 +52,7 @@ const EXTRACTORS = {
 
 };
 
-
-export async function extractAnnotations(file, type = 'ruby') {
+async function extractAnnotations(file, language = 'ruby') {
   const {assign} = Object;
   const testSuites = convert.xml2js(await readFile(file))
     .elements
@@ -67,7 +66,7 @@ export async function extractAnnotations(file, type = 'ruby') {
 
   async function extractAnnotation(testCase) {
     const lines = (testCase.error.content || testCase.error.message).trim().split('\n');
-    const [source, line] = await EXTRACTORS[type](lines);
+    const [source, line] = await EXTRACTORS[language](lines);
 
     return ({
       path: source.trim(),
@@ -100,10 +99,21 @@ async function unMap(line, column, mapFile = 'tests.map') {
   );
 }
 
-// async function run() {
-//   const annotations = await extractAnnotations();
-//
-//   console.log(JSON.stringify(annotations, null, 2));
-// }
-//
-// run();
+async function run(path, language) {
+  console.log(`Extracting to annotations from ${path} in language${language}`);
+  const annotations = await extractAnnotations(path, language);
+  console.log(JSON.stringify(annotations, null, 2));
+
+  console.log('Reporting to github');
+  await reportToGithub(annotations);
+}
+
+
+const path = core.getInput('report_file');
+const language = core.getInput('language');
+
+if (path) {
+  run(path, language);
+}
+
+
