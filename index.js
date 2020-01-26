@@ -14,18 +14,21 @@ async function reportToGithub(annotations) {
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
-    console.log(JSON.stringify(github.context, null, 2));
-
     const checkName = core.getInput('check-name', {required: true});
 
     // if we're running on a PR we need to get the last commit
     const pull_number = github.context.payload.number;
+
+    console.log(`Pull Number: ${pull_number}`);
 
     const commits = await octokit.pulls.listCommits({
       owner,
       repo,
       pull_number
     });
+
+
+    console.log(JSON.stringify(commits, null, 2));
 
     const ref = commits[commits.length - 1].sha;
 
