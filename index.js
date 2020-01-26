@@ -16,6 +16,8 @@ async function reportToGithub(annotations) {
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
+    console.log(JSON.stringify(github.context, null, 2));
+
     console.log(`Ref: ${ref}`);
     console.log(`Sha: ${sha}`);
     console.log(`Owner: ${owner}`);
