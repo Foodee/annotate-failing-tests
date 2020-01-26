@@ -11,13 +11,24 @@ const convert = require('xml-js');
 async function reportToGithub(annotations) {
   try {
     const octokit = new Octokit();
-    const ref = process.env.GITHUB_REF;
     const sha = process.env.GITHUB_SHA;
-    const contextSha = github.context.sha;
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
     console.log(JSON.stringify(github.context, null, 2));
+
+    const checkName = core.getInput('check-name', {required: true});
+
+    // if we're running on a PR we need to get the last commit
+    const number = github.context.payload.number;
+
+    const commits = await octokit.pulls.listCommits({
+      owner,
+      repo,
+      number
+    });
+
+    const ref = commits[commits.length - 1].sha;
 
     console.log(`Ref: ${ref}`);
     console.log(`Sha: ${sha}`);
@@ -25,7 +36,6 @@ async function reportToGithub(annotations) {
     console.log(`Owner: ${owner}`);
     console.log(`Repo: ${repo}`);
     console.log(`Check Run: ${check_run}`);
-    const checkName = core.getInput('check-name', {required: true});
 
     const res = await octokit.checks.listForRef({
       owner,
