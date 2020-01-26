@@ -10,7 +10,6 @@ const convert = require('xml-js');
 async function reportToGithub(annotations) {
   try {
     const octokit = new Octokit();
-    const sha = process.env.GITHUB_SHA;
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
@@ -27,14 +26,13 @@ async function reportToGithub(annotations) {
       pull_number
     });
 
+    const commits = data;
 
     console.log(JSON.stringify(commits, null, 2));
 
-    const ref = data[data.length - 1].sha;
+    const ref = commits[commits.length - 1].sha;
 
     console.log(`Ref: ${ref}`);
-    console.log(`Sha: ${sha}`);
-    console.log(`Context Sha: ${sha}`);
     console.log(`Owner: ${owner}`);
     console.log(`Repo: ${repo}`);
     console.log(`Check Run: ${check_run}`);
