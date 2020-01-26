@@ -4,7 +4,6 @@ const readFile = util.promisify(fs.readFile);
 const github = require('@actions/github');
 const {Octokit} = require("@octokit/action");
 const core = require('@actions/core');
-const Parser = require("junitxml-to-javascript");
 const {SourceMapConsumer} = require("source-map");
 const convert = require('xml-js');
 
@@ -20,12 +19,12 @@ async function reportToGithub(annotations) {
     const checkName = core.getInput('check-name', {required: true});
 
     // if we're running on a PR we need to get the last commit
-    const number = github.context.payload.number;
+    const pull_number = github.context.payload.number;
 
     const commits = await octokit.pulls.listCommits({
       owner,
       repo,
-      number
+      pull_number
     });
 
     const ref = commits[commits.length - 1].sha;
