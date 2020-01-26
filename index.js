@@ -13,6 +13,7 @@ async function reportToGithub(annotations) {
     const octokit = new Octokit();
     const ref = process.env.GITHUB_REF;
     const sha = process.env.GITHUB_SHA;
+    const contextSha = github.context.sha;
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
     const check_run = process.env.GITHUB_WORKFLOW;
 
@@ -20,6 +21,7 @@ async function reportToGithub(annotations) {
 
     console.log(`Ref: ${ref}`);
     console.log(`Sha: ${sha}`);
+    console.log(`Context Sha: ${sha}`);
     console.log(`Owner: ${owner}`);
     console.log(`Repo: ${repo}`);
     console.log(`Check Run: ${check_run}`);
