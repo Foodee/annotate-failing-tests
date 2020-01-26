@@ -21,7 +21,7 @@ async function reportToGithub(annotations) {
 
     console.log(`Pull Number: ${pull_number}`);
 
-    const commits = await octokit.pulls.listCommits({
+    const {data} = await octokit.pulls.listCommits({
       owner,
       repo,
       pull_number
@@ -30,7 +30,7 @@ async function reportToGithub(annotations) {
 
     console.log(JSON.stringify(commits, null, 2));
 
-    const ref = commits[commits.length - 1].sha;
+    const ref = data[data.length - 1].sha;
 
     console.log(`Ref: ${ref}`);
     console.log(`Sha: ${sha}`);
@@ -44,27 +44,15 @@ async function reportToGithub(annotations) {
       repo,
       ref,
       // check_run,
-      // status: "in_progress"
+      status: "in_progress"
     });
-
-    const suites = await octokit.checks.listSuitesForRef({
-      owner,
-      repo,
-      ref,
-      // check_run,
-      // status: "in_progress"
-    });
-
-
-    console.log(JSON.stringify(res.data, null, 2));
-    console.log(JSON.stringify(suites.data, null, 2));
 
     const {data: {check_runs}} = res;
 
     console.log('Checks');
     console.log(JSON.stringify(check_runs, null, 2));
 
-    const check_run_id = check_runs.filter(cr => cr.name == checkName)[0].id;
+    const check_run_id = check_runs.filter(cr => cr.name === checkName)[0].id;
 
     await octokit.checks.update({
       owner,
