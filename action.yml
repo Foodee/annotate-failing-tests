@@ -8,10 +8,12 @@ branding:
   icon:  'search'
   color: 'red'
 inputs:
-  reportfile:
+  report-file:
     description: 'Path to the file where the xunit test report file lives'
     required: true
     default: ''
+  map-file:
+    description: 'The path to a js file map file'
   check-name:
     description: 'The name of the check this action is running in'
     required: true

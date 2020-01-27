@@ -121,7 +121,8 @@ async function extractAnnotations(file, language = 'ruby') {
     );
 }
 
-async function unMap(line, column, mapFile = 'tests.map') {
+async function unMap(line, column) {
+  const mapFile = core.getInput('map-file') || 'dist/test-support.map';
   const rawSourceMap = JSON.parse(await readFile(mapFile));
   return await SourceMapConsumer.with(rawSourceMap, null, _ =>
     _.originalPositionFor({
