@@ -66,8 +66,12 @@ async function reportToGithub(annotations) {
 const EXTRACTORS = {
 
   async ruby(stack_trace) {
-    const source = stack_trace[stack_trace.length - 1];
-    return source.split(':');
+    const testRoot = core.getInput('test-root', {required: true});
+    let start = stack_trace.reverse().find(_ => _ => _.includes(testRoot));
+    let path = start.split(`${testRoot}/`)[1];
+    const [source, line] = path.split(':');
+    
+    return [source, line];
   },
 
   async ember_js_mocha(stack_trace) {
@@ -80,7 +84,7 @@ const EXTRACTORS = {
 
 };
 
-async function extractAnnotations(file, language = 'ruby') {
+export async function extractAnnotations(file, language = 'ruby') {
   const {assign} = Object;
 
   // Extract relevant info from the junit test report didn't use an NPM package
@@ -100,7 +104,7 @@ async function extractAnnotations(file, language = 'ruby') {
     }, _.attributes));
 
   async function extractAnnotation(testCase) {
-    const lines = (testCase.error.content || testCase.error.message).trim().split('\n');
+    const lines = testCase.error.content.trim().split('\n');
     const [source, line] = await EXTRACTORS[language](lines);
 
     return ({
