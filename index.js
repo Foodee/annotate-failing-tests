@@ -88,8 +88,12 @@ async function extractAnnotations(file, language = 'ruby') {
   // ember JS is where the stack trace lives.
 
   let string = await readFile(file, 'utf8');
-  // trim off every character that isn't an opening <
-  string = string.replace(/^[^<]*/, '');
+
+
+  // trim off every character that isn't an opening any non xml nonsense
+  string = string.replace(/^[^<]+/, '');
+  string = string.replace(/[^>]+$/, '');
+
   const testSuites = convert
     .xml2js(string)
     .elements
