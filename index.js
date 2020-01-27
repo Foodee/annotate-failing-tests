@@ -102,8 +102,8 @@ async function extractAnnotations(file, language = 'ruby') {
 
     return ({
       path: source.trim(),
-      start_line: line,
-      end_line: line,
+      start_line: parseInt(line, 10),
+      end_line: parseInt(line, 10),
       annotation_level: "failure",
       message: testCase.error.message,
       title: `${testCase.name} Failed`
