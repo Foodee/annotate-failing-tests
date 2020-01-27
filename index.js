@@ -86,7 +86,12 @@ async function extractAnnotations(file, language = 'ruby') {
   // Extract relevant info from the junit test report didn't use an NPM package
   // as it does not extract content from error message which in the case of
   // ember JS is where the stack trace lives.
-  const testSuites = convert.xml2js(await readFile(file))
+
+  let string = await readFile(file);
+  // trim off every character that isn't an opening <
+  string = string.replace(/^.*[^<]/, '');
+  const testSuites = convert
+    .xml2js(string)
     .elements
     .map(_ => assign({
       testCases: _.elements.map(_ => assign({
