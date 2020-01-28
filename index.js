@@ -70,7 +70,7 @@ const EXTRACTORS = {
     let start = stack_trace.reverse().find(_ => _ => _.includes(testRoot));
     let path = start.split(`${testRoot}/`)[1];
     const [source, line] = path.split(':');
-    
+
     return [source, line];
   },
 
@@ -84,7 +84,7 @@ const EXTRACTORS = {
 
 };
 
-export async function extractAnnotations(file, language = 'ruby') {
+async function extractAnnotations(file, language = 'ruby') {
   const {assign} = Object;
 
   // Extract relevant info from the junit test report didn't use an NPM package
