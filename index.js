@@ -66,7 +66,7 @@ async function reportToGithub(annotations) {
 const EXTRACTORS = {
 
   async ruby(stack_trace) {
-    const testRoot = core.getInput('test-root', {required: true});
+    const testRoot = core.getInput('test-root');
     let start = stack_trace.reverse().find(_ => _ => _.includes(testRoot));
     let path = start.split(`${testRoot}/`)[1];
     const [source, line] = path.split(':');
@@ -84,7 +84,7 @@ const EXTRACTORS = {
 
 };
 
-async function extractAnnotations(file, language = 'ruby') {
+export async function extractAnnotations(file, language = 'ruby') {
   const {assign} = Object;
 
   // Extract relevant info from the junit test report didn't use an NPM package
@@ -98,12 +98,15 @@ async function extractAnnotations(file, language = 'ruby') {
     .map(_ => assign({
       testCases: _.elements.map(_ => assign({
         error: _.elements ? _.elements.map(_ => assign({
-          content: _.elements[0].cdata
+          content: _.elements[0].cdata || _.elements[0].text
         }, _.attributes))[0] : null
       }, _.attributes))
     }, _.attributes));
 
   async function extractAnnotation(testCase) {
+    console.log('Extracting Error From: ');
+    console.log(JSON.stringify(testCase, null, 2));
+
     const lines = testCase.error.content.trim().split('\n');
     const [source, line] = await EXTRACTORS[language](lines);
 
@@ -152,7 +155,7 @@ async function run(path, language) {
 const path = core.getInput('report-file');
 const language = core.getInput('language');
 
-console.log(`Running Annotate Failing Tests Action ${path} in language${language}`);
+console.log(`Running Annotate Failing Tests Action ${path} in language ${language}`);
 
 if (path, language) {
   run(path, language);
