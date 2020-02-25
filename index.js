@@ -84,7 +84,7 @@ const EXTRACTORS = {
 
 };
 
-export async function extractAnnotations(file, language = 'ruby') {
+async function extractAnnotations(file, language = 'ruby') {
   const {assign} = Object;
 
   // Extract relevant info from the junit test report didn't use an NPM package
