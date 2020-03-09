@@ -71,7 +71,6 @@ const EXTRACTORS = {
     console.log('In: ');
     console.log(JSON.stringify(stack_trace, null, 2));
     let start = stack_trace.reverse().find(_ =>  _.includes(testRoot));
-
     console.log('Found: ' + start);
 
     let path = start.split(`${testRoot}/`)[1];
