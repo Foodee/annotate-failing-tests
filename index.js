@@ -67,6 +67,9 @@ const EXTRACTORS = {
 
   async ruby(stack_trace) {
     const testRoot = core.getInput('test-root');
+    console.log('Searching for test root: ' + testRoot);
+    console.log('In: ');
+    console.log(JSON.stringify(stack_trace, null, 2));
     let start = stack_trace.reverse().find(_ => _ => _.includes(testRoot));
     let path = start.split(`${testRoot}/`)[1];
     const [source, line] = path.split(':');
@@ -111,7 +114,6 @@ async function extractAnnotations(file, language = 'ruby') {
     const [source, line] = await EXTRACTORS[language](lines);
 
     console.log(`Found source: ${source} line: ${line}`);
-
     return ({
       path: source.trim(),
       start_line: parseInt(line, 10),
