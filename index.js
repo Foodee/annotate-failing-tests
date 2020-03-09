@@ -110,6 +110,8 @@ async function extractAnnotations(file, language = 'ruby') {
     const lines = testCase.error.content.trim().split('\n');
     const [source, line] = await EXTRACTORS[language](lines);
 
+    console.log(`Found source: ${source} line: ${line}`);
+
     return ({
       path: source.trim(),
       start_line: parseInt(line, 10),
@@ -145,8 +147,8 @@ async function unMap(line, column) {
 async function run(path, language) {
   console.log(`Extracting to annotations from ${path} in language${language}`);
   const annotations = await extractAnnotations(path, language);
+  console.log('Extracted Annoations');
   console.log(JSON.stringify(annotations, null, 2));
-
   console.log('Reporting to github');
   await reportToGithub(annotations);
 }
