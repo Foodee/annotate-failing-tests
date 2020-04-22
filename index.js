@@ -80,7 +80,7 @@ const EXTRACTORS = {
   },
 
   async ember_js_mocha(stack_trace) {
-    const sourceLine = stack_trace[2];
+    const sourceLine = stack_trace.find(_ => _.includes('test-support.js') || _.includes('tests.js'));
     const [_, mapped_line, mapped_column] = /(\d+):(\d+)/.exec(sourceLine) || [];
     const {source, line} = await unMap(parseInt(mapped_line), parseInt(mapped_column));
 
