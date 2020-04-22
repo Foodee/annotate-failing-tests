@@ -80,9 +80,14 @@ const EXTRACTORS = {
   },
 
   async ember_js_mocha(stack_trace) {
-    const sourceLine = stack_trace.find(_ => _.includes('test-support.js') || _.includes('tests.js'));
+    let sourceLine = stack_trace.find(_ => _.includes('test-support.js'));
+    const inTestSupport = !!sourceLine;
+
+    sourceLine = sourceLine ? sourceLine : stack_trace.find(_ => _.includes('tests.js'));
+    const mapFile = inTestSupport ? 'test-support.map' : 'tests.map';
+
     const [_, mapped_line, mapped_column] = /(\d+):(\d+)/.exec(sourceLine) || [];
-    const {source, line} = await unMap(parseInt(mapped_line), parseInt(mapped_column));
+    const {source, line} = await unMap(parseInt(mapped_line), parseInt(mapped_column), mapFile);
 
     return [source, line];
   }
@@ -137,9 +142,9 @@ async function extractAnnotations(file, language = 'ruby') {
     );
 }
 
-async function unMap(line, column) {
-  const mapFile = core.getInput('map-file') || 'dist/test-support.map';
-  const rawSourceMap = JSON.parse(await readFile(mapFile));
+async function unMap(line, column, mapFile) {
+  const fullMapFile = core.getInput('asset-folder') + mapFile;
+  const rawSourceMap = JSON.parse(await readFile(fullMapFile));
   return await SourceMapConsumer.with(rawSourceMap, null, _ =>
     _.originalPositionFor({
       line: line,
