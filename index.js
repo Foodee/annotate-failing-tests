@@ -164,9 +164,10 @@ async function run(path, language) {
 
 
 const path = core.getInput('report-file');
+const assetPath = core.getInput('asset-folder');
 const language = core.getInput('language');
 
-console.log(`Running Annotate Failing Tests Action ${path} in language ${language}`);
+console.log(`Running Annotate Failing Tests Action ${path} in language ${language} with asset path ${assetPath}`);
 
 if (path, language) {
   run(path, language);
