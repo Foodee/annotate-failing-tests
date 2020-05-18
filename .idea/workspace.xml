@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="322d6e58-4d11-43ac-a826-934b80a3e0cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -116,223 +117,8 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/cache.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/cache.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/cache-group.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/cache-group.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/lib/resolve-package-path.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-nouislider/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-nouislider/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-nouislider/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-nouislider/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-nouislider/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-nouislider/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-resize/app/mixins/resize-aware.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-resize/app/services/resize.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-resize/app/initializers/resize.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-resize/addon/mixins/resize-aware.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-resize/addon/services/resize.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-clipboard/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-clipboard/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-clipboard/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-clipboard/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-clipboard/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-clipboard/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-fetch/node_modules/broccoli-stew/lib/rm.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-babel/node_modules/resolve-package-path/tests/index-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/fs-merger/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/fs-merger/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/fs-merger/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/fs-merger/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/fs-merger/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/fs-merger/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-click-outside/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-click-outside/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-click-outside/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-click-outside/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-click-outside/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-click-outside/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/tests/index-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/cache.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/cache.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/cache-group.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/cache-group.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-in-element-polyfill/node_modules/resolve-package-path/lib/resolve-package-path.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli-htmlbars/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/build-waiter.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/test-waiter.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/noop-test-waiter.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/waiter-manager.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/wait-for-promise.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-waiters/addon/types/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/tests/index-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/cache.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/cache.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/cache-group.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/cache-group.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-test-selectors/node_modules/resolve-package-path/lib/resolve-package-path.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/ajax-request.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/errors.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/raw.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/request.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/-private/promise.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/-private/types.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/mixins/ajax-request.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/mixins/ajax-support.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/utils/ajax.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/services/ajax.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/mixins/legacy/normalize-error-response.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/-private/utils/url-helpers.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/-private/utils/is-string.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/-private/utils/get-header.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-ajax/addon/-private/utils/parse-response-headers.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-popper/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-popper/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-popper/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-popper/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-popper/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-popper/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-credit-cards/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-credit-cards/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-credit-cards/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-credit-cards/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-credit-cards/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-credit-cards/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-tooltips/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-tooltips/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-tooltips/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-tooltips/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-tooltips/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-tooltips/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/broccoli-stew/lib/rm.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/tests/index-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/cache.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/cache.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/cache-group.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/cache-group.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-cli/node_modules/resolve-package-path/lib/resolve-package-path.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/tests/index-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/cache.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/cache.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/cache-group.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/cache-group.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-set-helper/node_modules/resolve-package-path/lib/resolve-package-path.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/tests/index-test.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/cache.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/cache.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/cache-group.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/cache-group.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/resolve-package-path/lib/resolve-package-path.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-inline-svg/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-inline-svg/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-inline-svg/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-inline-svg/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-inline-svg/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-inline-svg/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/errors.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/ajax.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/types.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/mixins/adapter-fetch.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/utils/serialize-query-params.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/utils/determine-body-promise.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-simple-auth/node_modules/ember-fetch/addon/utils/mung-options-for-fetch.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-math-helpers/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-math-helpers/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-math-helpers/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-math-helpers/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-math-helpers/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/ember-math-helpers/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../MasterFox/clients/swift-fox/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/entry.d.ts" />
-      </list>
-    </option>
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579902973842">

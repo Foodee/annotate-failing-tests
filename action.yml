@@ -17,3 +17,6 @@ inputs:
   check-name:
     description: 'The name of the check this action is running in'
     required: true
+  language:
+    description: 'The name of the language the check is running against'
+    required: true
