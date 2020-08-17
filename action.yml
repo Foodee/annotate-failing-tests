@@ -14,6 +14,8 @@ inputs:
     default: ''
   map-file:
     description: 'The path to a js file map file'
+  test-root:
+    description: 'The path to a test folder'
   check-name:
     description: 'The name of the check this action is running in'
     required: true
