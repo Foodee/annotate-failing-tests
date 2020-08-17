@@ -7,6 +7,13 @@ const core = require('@actions/core');
 const {SourceMapConsumer} = require("source-map");
 const convert = require('xml-js');
 
+const parsePullRequestId = githubRef => {
+  const result = /refs\/pull\/(\d+)\/merge/g.exec(githubRef);
+  if (!result) throw new Error("Reference not found.");
+  const [, pullRequestId] = result;
+  return pullRequestId;
+};
+
 async function reportToGithub(annotations) {
   try {
     const octokit = new Octokit();
@@ -15,10 +22,8 @@ async function reportToGithub(annotations) {
 
     const checkName = core.getInput('check-name', {required: true});
 
-    const ev = JSON.parse(
-      fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8')
-    )
-    const pull_number = ev.pull_request.number
+    // if we're running on a PR we need to get the last commit
+    const pull_number = github.event.number;
 
     console.log(`Pull Number: ${pull_number}`);
 
