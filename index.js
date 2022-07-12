@@ -144,7 +144,7 @@ async function extractAnnotations(file, language = 'ruby') {
       testSuites
         .map(testSuite => testSuite
           .testCases
-          .filter(testCase => testCase.error)
+          .filter(testCase => testCase.errors !== "0")
           .map(extractAnnotation)
         ).flat()
     );
@@ -164,7 +164,7 @@ async function unMap(line, column, mapFile) {
 async function run(path, language) {
   console.log(`Extracting to annotations from ${path} in language${language}`);
   const annotations = await extractAnnotations(path, language);
-  console.log('Extracted Annoations');
+  console.log('Extracted Annotations');
   console.log(JSON.stringify(annotations, null, 2));
   console.log('Reporting to github');
   await reportToGithub(annotations);
