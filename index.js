@@ -109,9 +109,6 @@ async function extractAnnotations(file, language = 'ruby') {
   // ember JS is where the stack trace lives.
 
   let string = await readFile(file, 'utf8');
-  console.log('Test Report');
-  console.log(string);
-
   const testSuites = convert
     .xml2js(string)
     // This should be test suites
@@ -123,9 +120,6 @@ async function extractAnnotations(file, language = 'ruby') {
         }, testCase.attributes))[0] : null
       }, testSuite.attributes))
     }, testSuites.attributes));
-
-  console.log('Processed');
-  console.log(JSON.stringify(testSuites, null, 2))
 
   async function extractAnnotation(testCase) {
     console.log('Extracting Error From: ');
