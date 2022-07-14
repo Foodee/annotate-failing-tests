@@ -23,21 +23,7 @@ async function reportToGithub(annotations) {
     const checkName = core.getInput('check-name', {required: true});
 
     console.log(github.context);
-    const pull_number = github.context.issue.number;
-
-    console.log(`Pull Number: ${pull_number}`);
-
-    const {data} = await octokit.pulls.listCommits({
-      owner,
-      repo,
-      pull_number
-    });
-
-    const commits = data;
-
-    console.log(JSON.stringify(commits, null, 2));
-
-    const ref = commits[commits.length - 1].sha;
+    const ref = github.context.payload.head_commit.id;
 
     console.log(`Ref: ${ref}`);
     console.log(`Owner: ${owner}`);
@@ -144,7 +130,7 @@ async function extractAnnotations(file, language = 'ruby') {
       testSuites
         .map(testSuite => testSuite
           .testCases
-          .filter(testCase => testCase.errors !== undefined && testCase.errors !== "0" || testCase.errors === undefined && testCase.error)
+          .filter(testCase => testCase.errors !== "0")
           .map(extractAnnotation)
         ).flat()
     );
