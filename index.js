@@ -146,7 +146,7 @@ async function extractAnnotations(file, language = 'ruby') {
       testSuites
         .map(testSuite => testSuite
           .testCases
-          .filter(testCase => testCase.errors !== "0")
+          .filter(testCase => testCase.errors && testCase.errors !== "0" || !testCase.errors && testCase.error)
           .map(extractAnnotation)
         ).flat()
     );
