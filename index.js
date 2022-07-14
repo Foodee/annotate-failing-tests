@@ -22,10 +22,7 @@ async function reportToGithub(annotations) {
 
     const checkName = core.getInput('check-name', {required: true});
 
-    const ev = JSON.parse(
-      fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8')
-    )
-    const pull_number = ev.pull_request.number
+    const pull_number = github.context.issue.number;
 
     console.log(`Pull Number: ${pull_number}`);
 
@@ -93,7 +90,7 @@ const EXTRACTORS = {
     const inTestSupport = !!sourceLine;
 
     sourceLine = sourceLine ? sourceLine : stack_trace.find(_ => _.includes('tests.js'));
-    const mapFile = inTestSupport ? 'test-support.map' : 'tests.map';
+    const oapFile = inTestSupport ? 'test-support.map' : 'tests.map';
 
     const [_, mapped_line, mapped_column] = /(\d+):(\d+)/.exec(sourceLine) || [];
     const {source, line} = await unMap(parseInt(mapped_line), parseInt(mapped_column), mapFile);
