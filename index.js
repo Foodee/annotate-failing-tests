@@ -125,6 +125,8 @@ async function extractAnnotations(file, language = 'ruby') {
     });
   }
 
+  console.log(testSuites)
+
   return Promise
     .all(
       testSuites
