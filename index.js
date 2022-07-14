@@ -153,7 +153,7 @@ async function extractAnnotations(file, language = 'ruby') {
 }
 
 async function unMap(line, column, mapFile) {
-  const fullMapFile = `${core.getInput('asset-folder')}/${mapFile}`;
+  const fullMapFile = core.getInput('map-file');
   const rawSourceMap = JSON.parse(await readFile(fullMapFile));
   return await SourceMapConsumer.with(rawSourceMap, null, _ =>
     _.originalPositionFor({
